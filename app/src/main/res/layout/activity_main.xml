@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculator"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- First EditText -->
+    <EditText
+        android:id="@+id/etfirstvalue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Number1"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Second EditText -->
+    <EditText
+        android:id="@+id/etsecondvalue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Number2"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/etfirstvalue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ADD and SUB buttons (Horizontal alignment) -->
+    <RelativeLayout
+        android:id="@+id/buttonsSection1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/etsecondvalue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#8C5C5C" />
+
+        <Button
+            android:id="@+id/btnSubs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SUB"
+            android:layout_toEndOf="@id/btnAdd"
+            android:backgroundTint="#8C5C5C" />
+    </RelativeLayout>
+
+    <!-- MULT and DIV buttons (Horizontal alignment) -->
+    <RelativeLayout
+        android:id="@+id/buttonsSection2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonsSection1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnMult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MULT"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#8C5C5C" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIV"
+            android:layout_toEndOf="@id/btnMult"
+            android:backgroundTint="#8C5C5C" />
+    </RelativeLayout>
+
+    <!-- Result EditText -->
+    <EditText
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Result"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonsSection2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
